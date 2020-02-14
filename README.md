@@ -25,7 +25,14 @@ The best way to install this command is in your `/wp-content/mu-plugins` directo
 
 Cloning into 'wp-content/mu-plugins/wp-to-md'...
 # ... etc ...
+```
 
+Then add a file to include the command if WP-CLI is active.
+
+```bash
 ❯ echo "if ( class_exists( 'WP_CLI' ) ) require_once 'wp-to-md/wp-to-md.php';" > wp-content/mu-plugins/wp-to-md.php
 ❯ wp wptomd-types
+post
+page
+attachment
 ```

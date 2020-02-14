@@ -50,11 +50,6 @@ WP_CLI::add_command(
 		foreach ( get_posts( $get_post_args ) as $post ) {
 			$count ++;
 
-			if ( apply_filters( 'wptomd_skip_post', false, $post ) ) {
-				WP_CLI::line( 'Skipping: ' . $post->post_title );
-				continue;
-			}
-
 			WP_CLI::line( 'Processing: ' . $post->post_title );
 
 			$pid = $post->ID;
