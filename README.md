@@ -36,3 +36,12 @@ post
 page
 attachment
 ```
+
+Look at the `/filters` folder for examples showing how to adjust the content and meta specially for your site. Once you're ready:
+
+```bash
+❯ wp wptomd /path/to/output
+Output dir: /path/to/output/
+Processing: First Post title
+Filename: post/first-post-title.md
+```
