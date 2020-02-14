@@ -1,0 +1,26 @@
+{
+    "name": "joshcanhelp/wp-to-md",
+    "description": "A WP-CLI command to convert WordPress content to Markdown files",
+    "require": {
+        "php": "^7.0",
+        "league/html-to-markdown": "^4.9"
+    },
+    "require-dev": {
+        "dealerdirect/phpcodesniffer-composer-installer": "^0.5",
+        "wp-coding-standards/wpcs": "^1",
+        "phpcompatibility/phpcompatibility-wp": "*",
+        "phpunit/phpunit": "^6.0"
+    },
+    "scripts": {
+        "phpcs": "\"vendor/bin/phpcs\"",
+        "phpcbf": "\"vendor/bin/phpcbf\"",
+        "sniffs": "\"vendor/bin/phpcs\" -e"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Josh Cunningham",
+            "email": "josh@joshcanhelp.com"
+        }
+    ]
+}

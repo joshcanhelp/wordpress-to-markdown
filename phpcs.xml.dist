@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<ruleset name="WP-to-MD" namespace="WPAuth0\CS\Standard">
+    <description>A custom coding standard for WP-to-MD</description>
+
+    <file>.</file>
+
+    <!-- Skip Composer includes -->
+    <exclude-pattern>/vendor/*</exclude-pattern>
+
+    <!-- Only check PHP files. -->
+    <arg name="extensions" value="php"/>
+
+    <!-- Show progress, show the error codes for each message (source). -->
+    <arg value="sp"/>
+
+    <!-- Strip the filepaths down to the relevant bit. -->
+    <arg name="basepath" value="."/>
+
+    <!-- Show coloured output, if available. -->
+    <arg name="colors"/>
+
+    <config name="testVersion" value="7.0-"/>
+    <config name="minimum_supported_wp_version" value="4.9"/>
+
+    <rule ref="PHPCompatibilityWP"/>
+    <rule ref="Generic.CodeAnalysis">
+        <exclude name="Generic.CodeAnalysis.UnusedFunctionParameter.FoundInExtendedClassBeforeLastUsed"/>
+    </rule>
+    <rule ref="Generic.Arrays.DisallowLongArraySyntax.Found"/>
+    <rule ref="WordPress">
+      <exclude name="Squiz.Commenting.FileComment.Missing" />
+      <exclude name="WordPress.WP.AlternativeFunctions.file_system_read_fopen" />
+      <exclude name="WordPress.WP.AlternativeFunctions.file_system_read_fwrite" />
+      <exclude name="WordPress.WP.AlternativeFunctions.file_system_read_fclose" />
+    </rule>
+    <rule ref="WordPress.NamingConventions.PrefixAllGlobals">
+        <properties>
+            <property name="prefixes" type="array" value="wptomd" />
+        </properties>
+    </rule>
+</ruleset>
