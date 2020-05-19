@@ -30,6 +30,7 @@ Cloning into 'wp-content/mu-plugins/wp-to-md'...
 Then add a file to include the command if WP-CLI is active.
 
 ```bash
+❯ composer install -d wp-content/mu-plugins/wp-to-md
 ❯ echo "<?php if ( class_exists( 'WP_CLI' ) ) require_once 'wp-to-md/wp-to-md.php';" > wp-content/mu-plugins/wp-to-md.php
 ❯ wp wptomd-types
 post
